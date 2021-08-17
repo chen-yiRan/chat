@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+
     <router-view/>
+    <div id="bottom">
+        <div id="tab-bar">
+            <div class="tab-bar-item"><i class="el-icon-chat-dot-round"></i>消息</div>
+            <div class="tab-bar-item"><i class="el-icon-user"></i>好友</div>
+            <div class="tab-bar-item"><i class="el-icon-setting"></i>我</div>
+        </div>
+    </div>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #tab-bar{
+    display: flex;
 
-#nav {
-  padding: 30px;
-}
+    background-color: #f6f6f6;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right:0;
+  }
+  .tab-bar-item{
+    flex:1;
+    text-align: center;
+    height: 49px;
+    font-size: 14px;
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  }
+  .tab-bar-item i{
+    width: 100%;
+    font-size: 30px;
+  }
 </style>

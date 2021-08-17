@@ -1,18 +1,52 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <template>
+      <el-table
+          :data="tableData"
+          style="width: 100%">
+        <el-table-column
+
+            label="消息列表"
+            >
+          <template slot-scope="scope">
+            <div style="display: flex; flex-direction: row; align-items: center;">
+              <el-avatar size="medium" :src="circleUrl"></el-avatar>
+              <div style="display: flex; flex-direction: column;">
+                <span style="margin-left: 10px;">{{ scope.row.username }}</span>
+                <span style="margin-left: 10px;">{{ scope.row.lastmsg }}</span>
+              </div>
+            </div>
+          </template>
+        </el-table-column>
+
+      </el-table>
+    </template>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// // @ is an alias to /src
+// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+
+  },
+  data(){
+    return {
+      tableData : [
+        {
+          username: '1',
+          lastmsg: 'first'
+        },
+        {
+          username: '2',
+          lastmsg: 'tow'
+        }
+      ],
+      circleUrl:"https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+    }
   }
 }
 </script>
