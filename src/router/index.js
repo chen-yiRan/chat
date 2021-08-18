@@ -10,6 +10,21 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: () =>import('@/views/chat/Chat.vue')
+  },
+  {
+    path: '/friend',
+    name: 'Friend',
+    component: () =>import('@/views/Friend.vue')
+  },
+  {
+    path: '/me',
+    name: 'Me',
+    component: () =>import('@/views/Me.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'About',

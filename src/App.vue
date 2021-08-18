@@ -4,14 +4,51 @@
     <router-view/>
     <div id="bottom">
         <div id="tab-bar">
-            <div class="tab-bar-item"><i class="el-icon-chat-dot-round"></i>消息</div>
-            <div class="tab-bar-item"><i class="el-icon-user"></i>好友</div>
-            <div class="tab-bar-item"><i class="el-icon-setting"></i>我</div>
+            <div  class="tab-bar-item" @click="msg"><div v-if="!isActive1"><i class="el-icon-s-comment"></i></div><div v-else><i class="el-icon-chat-dot-round"></i></div>消息</div>
+          <div class="tab-bar-item" @click="friend"><div v-if="!isActive2"><i class="el-icon-user-solid"></i></div><div v-else><i class="el-icon-user"></i></div>好友</div>
+            <div class="tab-bar-item" @click="me"><div v-if="!isActive3"><i class="el-icon-s-tools"></i></div><div v-else><i class="el-icon-setting"></i></div>我</div>
         </div>
     </div>
   </div>
 </template>
+<script>
+  export default {
+    name : "App",
+    data(){
+      return {
 
+      }
+    },
+    computed:{
+      isActive1(){
+        return this.$route.path !== '/';
+      },
+      isActive2(){
+
+        return this.$route.path !== '/friend';
+      },
+      isActive3(){
+
+        return this.$route.path !== '/me';
+      }
+    },
+    methods:{
+      msg(){
+        // this.$router.push("/");
+
+        this.$router.replace("/");
+      },
+      friend(){
+
+        this.$router.replace("/friend");
+      },
+      me(){
+
+        this.$router.replace("/me");
+      }
+    }
+  }
+</script>
 <style>
   #tab-bar{
     display: flex;
