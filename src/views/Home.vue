@@ -36,10 +36,12 @@ export default {
     return {
       tableData : [
         {
+          userId: 1,
           username: '1',
           lastmsg: 'first'
         },
         {
+          userId: 2,
           username: '2',
           lastmsg: 'tow'
         }
@@ -50,7 +52,7 @@ export default {
   methods :{
     rowclick(row, column, event){
       console.log(row);
-      this.$router.push("/chat");
+      this.$router.push("/chat/"+row.userId);
     }
   }
 }
