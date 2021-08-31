@@ -16,7 +16,7 @@
     name : "App",
     data(){
       return {
-
+        path: '/'
       }
     },
     computed:{
@@ -35,15 +35,15 @@
     methods:{
       msg(){
         // this.$router.push("/");
-
+        this.path = '/';
         this.$router.replace("/");
       },
       friend(){
-
+        this.path = '/friend';
         this.$router.replace("/friend");
       },
       me(){
-
+        this.path = '/me';
         this.$router.replace("/me");
       }
     }
