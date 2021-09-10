@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*清除浮动 start*/
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom:1;
+}
+/* 清除浮动 end*/
+
+body {
+    background-color: #f3f5f7;
+}
+a{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 42px;
+    /*background-color: pink;*/
+    /*注意此地方会重叠w里面的margin*/
+    margin: 30px auto;
+}
+.logo {
+    width: 198px;
+    height: 42px;
+    float: left;
+}
+.nav{
+    float: left;
+    margin-left: 60px;
+}
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a {
+    display: block;
+
+    height: 42px;
+    line-height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #050505;
+}
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    height: 40px;
+    color: #00a4ff;
+}
+.search {
+    float: left;
+    height: 42px;
+    width: 411px;
+    margin-left: 70px;
+}
+.search input {
+    width: 345px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    height: 40px;
+    /* 行内块元素之间默认有缝隙 */
+    float: left;
+    color: #bfbfbf;
+    font-size: 14px;
+    /* 有width会撑大盒子 */
+    padding-left: 15px;
+}
+.search button {
+    width: 50px;
+    height: 42px;
+    /* 行内块元素之间默认有缝隙 */
+    float: left;
+/*    按钮button默认有个边框需要我们手动去掉 */
+    border: 0;
+    background: url("../img/btn.png");
+}
+.user {
+    float: right;
+    background-color: antiquewhite;
+    margin-right: 30px;
+    /*line-height: 42px;*/
+    font-size: 14px;
+    color: #666;
+}
+.user p{
+    display: inline-block;
+}
+
+
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .w {
+    height: 420px;
+    background: url("../img/banner.png") no-repeat top center;
+}
+
+.subnav {
+    width: 190px;
+    height: 420px;
+    background: rgba(0,0,0,0.3);
+    float: left;
+}
+.subnav ul {
+    /*margin-top: 150px;*/
+    /*background-color: #00a4ff;*/
+    padding-top: 15px;
+}
+.subnav ul li a{
+    display: block;
+    height: 45px;
+    color: #ffffff;
+    line-height: 45px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+.subnav ul li a:hover{
+    color: #00a4ff;
+}
+.subnav ul li a span {
+    float: right;
+}
+
+.course {
+    width: 230px;
+    height: 300px;
+    background-color: #ffffff;
+    /* 浮动的盒子不会有外边距合并的问题 */
+    margin-top: 50px;
+    float: right;
+}
+.course h2{
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    background-color: #9bceea;
+}
+.bd {
+    height: 250px;
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.bd ul li{
+    /*height: 65px;*/
+    /*line-height: 65px;*/
+    padding: 15px;
+}
+.bd ul li h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+.bd ul li p {
+    font-size: 12px;
+}
+
+.bd .more {
+    display: block;
+    border: 1px solid #00a4ff;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #00a4ff;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.goods {
+    height: 60px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0,0.1);
+    /*行高会继成给3个孩子*/
+    line-height: 60px;
+}
+.goods h3{
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #00a4ff;
+    margin-left: 30px;
+}
+.goods ul li {
+    float: left;
+}
+.goods ul li a {
+    padding-left: 30px;
+    font-size: 16px;
+    color: #050505;
+    border-left: 1px solid #cccccc;
+    margin-left: 30px;
+}
+.goods .mod {
+    float: right;
+    margin-right: 30px;
+    color: #00a4ff;
+    font-size: 14px;
+}
+
+.box {
+    /* 父盒子不要给高度 ，子元素全都是浮动的，让他们自己决定高度*/
+    /*height: 600px;*/
+    margin-top: 30px;
+    /*background-color: pink;*/
+}
+.box-hd {
+    height: 45px;
+}
+.box-hd h3{
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    color: #494949;
+}
+.box-hd a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.box-bd{
+    /*width: 232px;*/
+    /*height: 270px;*/
+
+}
+.box-bd ul {
+    width: 1235px;
+}
+/* 把li的父亲ul修改的足够宽一行能装5个盒子就不会换行了 */
+.box-bd ul li{
+    width: 232px;
+    height: 270px;
+    float: left;
+    border: 1px solid #cccccc;
+    margin-right: 13px;
+    margin-bottom: 15px;
+}
+.box-bd h4{
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px;
+    color: #050505;
+}
+.box-bd p{
+    font-size: 12px;
+    padding: 0 20px;
+    color: #999999;
+}
+.box-bd p span{
+    color: #ff7c2d;
+}
+
+
+.footer {
+    height: 415px;
+    background-color: #fff;
+}
+.footer .w {
+    padding-top: 30px;
+    /*background-color: #9bceea;*/
+}
+
+.copyright {
+    float: left;
+}
+.copyright p {
+    font-size: 12px;
+    color: #666666;
+    margin: 20px 0 15px 0;
+}
+.copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+.links {
+    float: right;
+}
+.links dl {
+    float: left;
+    margin-left: 100px;
+}
+.links dl dt {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.links dl dd a {
+    font-size: 12px;
+    color: #333333;
+}
