@@ -87,7 +87,7 @@
 
 .recom {
     height: 163px;
-    background-color: pink;
+    background-color: #ebebeb;
     margin-top: 12px;
 }
 .recom-hd {
@@ -100,4 +100,18 @@
 }
 .recom-bd {
     float: left;
+}
+.recom-bd ul li {
+    float: left;
+    position: relative;
+}
+/*after元素为行内元素 ，加了position可以改变宽高*/
+.recom-bd ul li:nth-child(-n+3)::after {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    content: '';
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
 }
