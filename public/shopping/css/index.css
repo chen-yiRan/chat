@@ -105,6 +105,10 @@
     float: left;
     position: relative;
 }
+.recom-bd ul li img{
+    width: 248px;
+    height: 163px;
+}
 /*after元素为行内元素 ，加了position可以改变宽高*/
 .recom-bd ul li:nth-child(-n+3)::after {
     position: absolute;
