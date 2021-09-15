@@ -45,6 +45,10 @@
 .news-bd ul li{
     height: 24px;
     line-height: 24px;
+    /* 文字溢出省略、隐藏*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .lifeservice {
     height: 209px;
