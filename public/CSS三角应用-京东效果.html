@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS三角应用-京东效果</title>
+    <style>
+        .box1{
+            width: 0;
+            height: 0;
+            border-top: 10px solid #ff6700;
+            border-right: 10px solid #00a4ff;
+            border-bottom: 10px solid pink;
+            border-left: 10px solid greenyellow;
+        }
+        .box2{
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top-color: #ff6700;
+
+            margin-top: 100px;
+        }
+
+        .jd{
+            position: relative;
+            width: 120px;
+            height: 249px;
+            background-color: pink;
+        }
+        .jd span{
+            /* 加了绝对定位，行内元素就可以设置宽高 */
+            position: absolute;
+            right: 15px;
+            /*盒子的高度为10px*/
+            top: -10px;
+            width: 0;
+            height: 0;
+
+            /* 这两个是为了兼容性 */
+            line-height: 0;
+            font-size: 0;
+
+            border: 5px solid transparent;
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="jd">
+        <span></span>
+    </div>
+</body>
+</html>
