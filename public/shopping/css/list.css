@@ -1,0 +1,62 @@
+.nav {
+    /*因为后面的行高比高多出了一部分，导致盒子溢出，由于浮动文字环绕了，所以添加溢出隐藏解决错误*/
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+.sk_con  ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+.sk_con ul li:last-child a::after{
+    content: '\e91e';
+    font-family: icomoon;
+}
+/*.sk_bd ul {*/
+/*    width: 1212px;*/
+/*}*/
+.sk_bd ul li{
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 460px;
+    /*这样子hover时图片就不会抖动*/
+    border: 1px solid transparent;
+}
+.sk_bd ul li:nth-child(4n){
+    margin-right: 0;
+}
+.sk_bd ul li:hover{
+    border: 1px solid #c81523;
+}
